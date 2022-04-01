@@ -45,7 +45,7 @@
                   "maximumError": "1mb"
                 },
                 {
-                  "type": "anyComponentStyle",
+                  "type": "ComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
@@ -104,6 +104,16 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "simple-crm:build:production",
+            "firebaseProject": "simple-crm-e42e8",
+            "firebaseHostingSite": "simple-crm-e42e8"
           }
         }
       }
